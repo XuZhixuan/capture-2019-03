@@ -42,7 +42,8 @@ class GetData extends Command
     {
         $client = new Client();
         for ($page=1; $page<=9849; $page++) {
-            $response = $client->request('GET', 'http://202.117.24.229/api/users?page=' . $page);
+            $response = $client->request('GET', 'http://***.***.***.***/api/users?page=' . $page);
+            //TODO 自行添加IP地址
             $data = json_decode((string)$response->getBody(), true);
 
             foreach ($data['data']['list'] as $tmp) {
