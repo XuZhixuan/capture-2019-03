@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@root');
+
+Route::post('person', 'PeopleController@show')->name('person.show');
